@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardActions, CardMedia,  Divider, Typography, Grid } from '@mui/material';
+import { Card, CardContent, CardActions, CardMedia, Divider, Typography, Grid } from '@mui/material';
 import { Stack } from '@mui/system';
 import GooglePayButton from './GooglePayButton';
 
