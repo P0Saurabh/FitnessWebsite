@@ -3,6 +3,7 @@ import {  ThemeProvider, createTheme } from '@mui/material';
   // Make sure the path to your component is correct
 import MiniDrawer from './main'
 // Create a theme instance
+// import Home from './Components/';
 
 const theme = createTheme({
   palette: {
