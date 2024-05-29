@@ -4,7 +4,7 @@ import { AuthProvider } from './AuthContext';
 import Login from './Login';
 import Register from './Register';
 import PermanentDrawerLeft from './PermanentDrawerLeft';
-import Marketplace from './Marketplace'; // Import Marketplace component
+
 
 function App() {
     return (
