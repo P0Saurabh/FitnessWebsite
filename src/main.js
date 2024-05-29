@@ -7,6 +7,7 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -20,7 +21,8 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import ChartsOverviewDemo from './Card';
 
-import Home from './Components/Home';
+
+// import Home from './Components/Home';
 
 const drawerWidth = 240;
 
@@ -111,16 +113,19 @@ export default function MiniDrawer() {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
+            size="large"
             sx={{
+              mr: 2,
               marginRight: 5,
               ...(open && { display: 'none' }),
             }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             Mini variant drawer
           </Typography>
+          <Button color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
