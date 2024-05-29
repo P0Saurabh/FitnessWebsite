@@ -4,7 +4,7 @@ import { AuthProvider } from './AuthContext';
 import Login from './Login';
 import Register from './Register';
 import PermanentDrawerLeft from './PermanentDrawerLeft';
-
+import Marketplace from './Marketplace'; // Import Marketplace component
 
 function App() {
     return (
@@ -13,7 +13,7 @@ function App() {
                 <Routes>
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
-                    <Route path="/*" element={<PermanentDrawerLeft />} /> {/* Changed to handle nested routes */}
+                    <Route path="/*" element={<PermanentDrawerLeft />} /> {/* Handle nested routes */}
                 </Routes>
             </Router>
         </AuthProvider>
