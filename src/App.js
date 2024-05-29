@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {  ThemeProvider, createTheme } from '@mui/material';
-import ChartsOverviewDemo from './Card';  // Make sure the path to your component is correct
-
+  // Make sure the path to your component is correct
+import MiniDrawer from './main'
 // Create a theme instance
 const theme = createTheme({
   palette: {
@@ -25,7 +25,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <h1>hi</h1>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-        <ChartsOverviewDemo />
+        <MiniDrawer />
       </div>
     </ThemeProvider>
   );
