@@ -20,9 +20,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import ChartsOverviewDemo from './Card';
-
-
-// import Home from './Components/Home';
+// import { useHistory } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -103,6 +101,13 @@ export default function MiniDrawer() {
     setOpen(false);
   };
 
+  // const history = useHistory();
+
+  // const handleLogin = () => {
+  //   // Navigate to the Home.js page when the login button is clicked
+  //   history.push('/Home');
+  // };
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -125,7 +130,9 @@ export default function MiniDrawer() {
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             Mini variant drawer
           </Typography>
-          <Button color="inherit">Logout</Button>
+          <Button color="inherit" 
+          // variant="contained" onClick={handleLogin} 
+          >Logout</Button>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
