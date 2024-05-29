@@ -20,6 +20,8 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import ChartsOverviewDemo from './Card';
 
+import Home from './Components/Home';
+
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
