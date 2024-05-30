@@ -9,12 +9,14 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/Inbox';
-import MailIcon from '@mui/icons-material/Mail';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Marketplace from './Marketplace';
+import Guide from './Guide';
+import Gym from './Gym';
+import Yoga from './Yoga';
 
 function PermanentDrawerLeft() {
     const { currentUser } = useAuth();
@@ -61,16 +63,14 @@ function PermanentDrawerLeft() {
                                 <ListItemText primary="Marketplace" />
                             </ListItemButton>
                         </ListItem>
-                        {['Inbox', 'Starred', 'Send Email', 'Drafts'].map((text, index) => (
-                            <ListItem key={text} disablePadding>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                                    </ListItemIcon>
-                                    <ListItemText primary={text} />
-                                </ListItemButton>
-                            </ListItem>
-                        ))}
+                        <ListItem disablePadding>
+                            <ListItemButton component={Link} to="/guide">
+                                <ListItemIcon>
+                                    <InboxIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Guide" />
+                            </ListItemButton>
+                        </ListItem>
                     </List>
                 </div>
                 <Button
@@ -87,6 +87,9 @@ function PermanentDrawerLeft() {
                 <Routes>
                     <Route path="/" element={<Typography paragraph>This is the main content area.</Typography>} />
                     <Route path="/marketplace" element={<Marketplace />} />
+                    <Route path="/guide" element={<Guide />} />
+                    <Route path="/gym" element={<Gym />} />
+                    <Route path="/yoga" element={<Yoga />} />
                 </Routes>
             </Box>
         </Box>
